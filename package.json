@@ -1,0 +1,46 @@
+{
+  "name": "neoui-kero-mixin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --colors --progress --mode=build",
+    "dev": "webpack --progress --colors  --mode=dev",
+    "dist": "webpack --progress --colors  --mode=dev && webpack --colors --progress --mode=build && node version --mode=dev &&  node version --mode=build",
+    "product": "npm run dev && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iuap-design/neoui-kero-mixin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iuap-design/neoui-kero-mixin/issues"
+  },
+  "homepage": "https://github.com/iuap-design/neoui-kero-mixin#readme",
+  "dependencies": {
+    "babel-runtime": "^6.20.0",
+    "tinper-neoui": "^3.1.22",
+    "tinper-sparrow": "^3.1.22"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.21.0",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.18.0",
+    "babel-plugin-transform-es3-member-expression-literals": "^6.8.0",
+    "babel-plugin-transform-es3-property-literals": "^6.8.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-es2015-loose": "^8.0.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "chai": "^3.5.0",
+    "cz-conventional-changelog": "^1.2.0",
+    "eslint": "^3.13.1",
+    "eslint-loader": "^1.6.1",
+    "webpack": "^1.14.0",
+    "yargs": "^6.6.0"
+  }
+}
