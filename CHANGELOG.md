@@ -1,5 +1,10 @@
-<a name="3.1.22"></a>
-## 3.1.22 (2017-02-10)
+<a name="3.1.25"></a>
+## [3.1.25](https://github.com/iuap-design/neoui-kero-mixin/compare/d6f4147...v3.1.25) (2017-02-10)
+
+
+### Features
+
+* 添加自动生成changelog ([d6f4147](https://github.com/iuap-design/neoui-kero-mixin/commit/d6f4147))
 
 
 
