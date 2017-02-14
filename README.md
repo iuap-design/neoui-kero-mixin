@@ -1,23 +1,53 @@
-# neoui-kero-mixin
 
-`neoui-kero-mixin`主要是提供进行数据校验的相关方法
+[![npm version](https://img.shields.io/npm/v/neoui-kero-mixin.svg)](https://www.npmjs.com/package/neoui-kero-mixin)
+[![Build Status](https://img.shields.io/travis/iuap-design/neoui-kero-mixin/master.svg)](https://travis-ci.org/iuap-design/neoui-kero-mixin)
+[![devDependency Status](https://img.shields.io/david/dev/iuap-design/neoui-kero-mixin.svg)](https://david-dm.org/iuap-design/neoui-kero-mixin#info=devDependencies)
+[![NPM downloads](http://img.shields.io/npm/dm/neoui-kero-mixin.svg?style=flat)](https://npmjs.org/package/neoui-kero-mixin)
 
-## 开发技术说明
 
-* 基于Webpack构建资源.
-* 使用ES6语法特性.
-* 导出[umd](https://github.com/umdjs/umd)格式文件，随处使用.
-* 使用[Mocha](http://mochajs.org/) 和 [Chai](http://chaijs.com/) 进行项目测试.
-* [ESLint](http://eslint.org/)帮助我们进行代码规范检测.
+[中文文档](./README_CN.md)
+##  Introduction
+`neoui-kero-mixin` for the adaptation layer of the common logic extraction, adaptation layer can be added to the corresponding mixin
 
-## 如何开发
+## Contributing
 
-安装依赖
+
+### Feedback
+
+If you encounter any problems , submit [issues](https://github.com/iuap-design/neoui-kero-mixin/issues),or pull request。
+
+[PR code](CONTRIBUTING.md)
+
+### Develop
+
+Developers can participate in the development of neoui-kero-mixin,  but also can be based on neoui-kero-mixin two development
+
+
+neoui-kero-mixin use gulp.js and webpack build the project.
+
+
+clone：
+
+```
+$ git clone git@github.com:iuap-design/neoui-kero-mixin.git
+```
+
+install：
+
 ```
 $ npm install
 ```
 
-编译产出
+build：
+
 ```
 $ npm run product
 ```
+
+### Website Chat Group
+
+527124070
+
+## Licence 版权
+
+[MIT](./LICENSE)
