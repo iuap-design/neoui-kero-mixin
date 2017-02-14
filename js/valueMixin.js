@@ -137,6 +137,7 @@ var ValueMixin = {
          * @param {Object} value
          */
         setValue: function (value) {
+            value = this.beforeSetValue(value);
             this.trueValue = this.formater ? this.formater.format(value) : value;
             this.showValue = this.masker ? this.masker.format(this.trueValue).value : this.trueValue;
             this.setShowValue(this.showValue);
@@ -153,11 +154,14 @@ var ValueMixin = {
                     if(rowObj)
                         rowObj.setValue(this.field, this.trueValue);
                 }
-                
+
             }else{
                 this.dataModel.setValue(this.field, this.trueValue);
             }
             this.slice = false;
+        },
+        beforeSetValue: function(value){
+          return value;
         },
         /**
          * 取控件的值
