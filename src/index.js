@@ -3,7 +3,7 @@
  * Author : yaoxinc
  * Date	  : 2017-01-17 16:51:05
  */
-import {extend} from 'tinper-sparrow/js/extend';
+import {extend} from 'tinper-sparrow/src/extend';
 
 import {EnableMixin} from './enableMixin';
 import {RequiredMixin} from './requiredMixin';

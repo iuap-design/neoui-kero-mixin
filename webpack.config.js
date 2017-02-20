@@ -2,8 +2,20 @@ var webpack = require('webpack');
 var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
 var path = require('path');
 var env = require('yargs').argv.mode;
+var fs = require('fs');
 
 var libraryName = 'keromixin';
+var data = fs.readFileSync('./package.json', 'utf8');
+var packageObj = JSON.parse(data);
+var headerStr = '';
+headerStr += packageObj.name + ' v' + packageObj.version + '\r\n';
+headerStr += packageObj.description + '\r\n';
+headerStr += 'author : ' + packageObj.author + '\r\n';
+headerStr += 'homepage : ' + packageObj.homepage + '\r\n';
+headerStr += 'bugs : ' + packageObj.bugs.url;
+var plugins = [new webpack.BannerPlugin(headerStr)],
+    outputFile;
+
 
 var plugins = [],
 	outputFile;
@@ -18,7 +30,7 @@ if(env === 'build') {
 }
 
 var config = {
-	entry: __dirname + '/js/index.js',
+	entry: __dirname + '/src/index.js',
 	output: {
 		path: __dirname + '/dist/js',
 		filename: outputFile,

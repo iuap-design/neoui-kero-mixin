@@ -3,7 +3,7 @@
  * Author : Kvkens(yueming@yonyou.com)
  * Date	  : 2016-08-08 16:32:54
  */
-import {addClass,removeClass} from 'tinper-sparrow/js/dom';
+import {addClass,removeClass} from 'tinper-sparrow/src/dom';
 
 var EnableMixin = {
     init: function(){
