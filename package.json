@@ -1,6 +1,6 @@
 {
   "name": "neoui-kero-mixin",
-  "version": "3.2.0",
+  "version": "3.2.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -24,8 +24,8 @@
   },
   "homepage": "https://github.com/iuap-design/neoui-kero-mixin#readme",
   "dependencies": {
-    "tinper-neoui": "^3.2.1",
-    "tinper-sparrow": "^3.2.1"
+    "tinper-neoui": "^3.2.3",
+    "tinper-sparrow": "^3.2.2"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",

@@ -1,5 +1,5 @@
 /**
- * neoui-kero-mixin v3.2.0
+ * neoui-kero-mixin v3.2.1
  * 
  * author :
  * homepage : https://github.com/iuap-design/neoui-kero-mixin#readme
