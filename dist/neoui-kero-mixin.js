@@ -1,5 +1,5 @@
 /**
- * neoui-kero-mixin v3.2.1
+ * neoui-kero-mixin v3.2.2
  * 
  * author :
  * homepage : https://github.com/iuap-design/neoui-kero-mixin#readme
@@ -264,14 +264,27 @@ var EnableMixin = {
     init: function init() {
         var self = this;
         //处理只读
-        if (this.options['enable'] && (this.options['enable'] == 'false' || this.options['enable'] == false)) {
-            this.setEnable(false);
-        } else {
+        /*if (this.options['enable'] && (this.options['enable'] == 'false' || this.options['enable'] == false)){
+                this.setEnable(false);
+        }else {
             this.dataModel.refEnable(this.field).subscribe(function (value) {
                 self.setEnable(value);
             });
             this.setEnable(this.dataModel.isEnable(this.field));
+        }*/
+
+        var oEnable = this.options.enable,
+            enable;
+        if (typeof oEnable == 'undefined') {
+            enable = this.dataModel.getRowMeta(this.field, 'enable');
+        } else {
+            enable = oEnable;
         }
+        this.enable = enable;
+        this.setEnable(this.enable);
+        this.dataModel.refEnable(this.field).subscribe(function (value) {
+            self.setEnable(value);
+        });
     },
     methods: {
         setEnable: function setEnable(enable) {
