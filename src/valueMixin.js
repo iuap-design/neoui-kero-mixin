@@ -152,7 +152,7 @@ var ValueMixin = {
                 }else{
                     var rowObj = this.dataModel.getRow(this.options.rowIndex);
                     if(rowObj)
-                        rowObj.setValue(this.field, this.trueValue);
+                        rowObj.setValue(this.field, this.trueValue, undefined, undefined, this.validType);//增加validType参数--胡玥修改
                 }
 
             }else{
