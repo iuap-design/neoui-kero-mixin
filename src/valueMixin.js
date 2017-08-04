@@ -156,7 +156,7 @@ var ValueMixin = {
                 }
 
             }else{
-                this.dataModel.setValue(this.field, this.trueValue);
+                this.dataModel.setValue(this.field, this.trueValue, undefined, undefined, this.validType);//增加validType参数--胡玥修改
             }
             this.slice = false;
         },
