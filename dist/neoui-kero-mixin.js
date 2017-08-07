@@ -1,5 +1,5 @@
 /**
- * neoui-kero-mixin v3.2.2
+ * neoui-kero-mixin v3.2.3
  * 
  * author :
  * homepage : https://github.com/iuap-design/neoui-kero-mixin#readme
@@ -280,8 +280,10 @@ var EnableMixin = {
         } else {
             enable = oEnable;
         }
+        if (typeof enable == 'undefined' || enable == null) enable = true;
         this.enable = enable;
         this.setEnable(this.enable);
+        //refEnable方法：绑定字段是否可修改属性，当字段enable属性发生改变时触发对应方法
         this.dataModel.refEnable(this.field).subscribe(function (value) {
             self.setEnable(value);
         });
@@ -311,6 +313,7 @@ var RequiredMixin = {
     init: function init() {
         var self = this;
         this.required = this.getOption('required');
+        //refRowMeta方法：绑定当前行的字段属性，当字段属性发生改变时触发对应方法
         this.dataModel.refRowMeta(this.field, "required").subscribe(function (value) {
             self.setRequired(value);
         });
@@ -1561,10 +1564,10 @@ var ValueMixin = {
                     if (lastRow) lastRow.setValue(lastField, this.trueValue);
                 } else {
                     var rowObj = this.dataModel.getRow(this.options.rowIndex);
-                    if (rowObj) rowObj.setValue(this.field, this.trueValue);
+                    if (rowObj) rowObj.setValue(this.field, this.trueValue, undefined, undefined, this.validType); //增加validType参数--胡玥修改
                 }
             } else {
-                this.dataModel.setValue(this.field, this.trueValue);
+                this.dataModel.setValue(this.field, this.trueValue, undefined, undefined, this.validType); //增加validType参数--胡玥修改
             }
             this.slice = false;
         },

@@ -1,3 +1,18 @@
+<a name="3.2.3"></a>
+## [3.2.3](https://github.com/iuap-design/neoui-kero-mixin/compare/v3.2.2...v3.2.3) (2017-08-04)
+
+
+### Bug Fixes
+
+* 修改在setValue的时候传入ValidateType来判断类型 ([ad55906](https://github.com/iuap-design/neoui-kero-mixin/commit/ad55906))
+
+
+### Features
+
+* 增加validType参数进行eq判断 ([0e2722b](https://github.com/iuap-design/neoui-kero-mixin/commit/0e2722b))
+
+
+
 <a name="3.2.2"></a>
 ## [3.2.2](https://github.com/iuap-design/neoui-kero-mixin/compare/v3.2.1...v3.2.2) (2017-06-23)
 
